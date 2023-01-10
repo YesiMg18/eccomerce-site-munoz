@@ -1,6 +1,11 @@
+import * as React from 'react';
+import IconButton from '@mui/material/IconButton';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './navbar.scss';
 import LogoImage  from '../assets/logo.png';
-import cartIcon from '../assets/shopping-cart 2.svg';
+
+
+
 
 export const Navbar = () => {
     return (
@@ -11,10 +16,11 @@ export const Navbar = () => {
                     <li><a href='#'>Quienes somos</a></li>
                     <li><a href='#'>Nuestros productos</a></li>
                     <li><a href='#'>Contacto</a></li>
-                    <li><a href='#'><img src={cartIcon}/></a></li>
+                    <li><IconButton color="primary" aria-label="add to shopping cart"><AddShoppingCartIcon /></IconButton></li>
                 </ul>
             </nav>
         </header>
     )
 }
+ export default Navbar
 
