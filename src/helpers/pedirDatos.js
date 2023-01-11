@@ -4,7 +4,7 @@ export const pedirDatos = () => {
     return new Promise((resolve, reject) =>{
         setTimeout ( () => {             
             resolve(MOCK_DATA)
-        }, 3000)
+        }, 500)
     })
 }
 
@@ -17,6 +17,6 @@ export const pedirItemPorId = (id) => {
             }else{
                 reject({error:'No se encontró ese producto'})
             }
-        },2000)
+        },500)
     })
 }

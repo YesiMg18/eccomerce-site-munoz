@@ -8,11 +8,25 @@ import ItemDetailContainer from "./components/contenedores/itemDetailContainer.j
 
 function App() {
   return (
-    <div>
+
+    <BrowserRouter>
       <Navbar/>
-      <ItemListContainer/>
-    </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer/>}/>
+        <Route path="/productos/:categoryId" element={ <ItemListContainer/>}/>
+        <Route path="/detail/:itemId" element={ <ItemDetailContainer/>}/>       
+        <Route path="*" element={<Navigate to={"/"}/>}/>
+
+      </Routes>
+     
+    </BrowserRouter>
+
+   
   );
 }
 
 export default App;
+
+
+
+{/*<Route path="/" element={<ItemDetailContainer/>}/>*/}

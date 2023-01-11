@@ -14,6 +14,7 @@ const ItemDetail = ({id, name, stock, category, image, description, price}) => {
             <img src={image}/>
             <p>{description}</p>
             <p>Precio: ${price}</p>
+            <small>Categoria: {category}</small>
             <button className='btn btn-primary' onClick={handleVolver}>Volver a Catálogo</button>
 
         </div>
